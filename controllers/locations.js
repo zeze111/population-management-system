@@ -154,7 +154,7 @@ export default class Locations {
               if (!location) {
                 return response.status(404).json({
                   status: "Unsuccessful",
-                  message: "Location does not exist"
+                  message: "Location not found"
                 });
               } else {
                 location

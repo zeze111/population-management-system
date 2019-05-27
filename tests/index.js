@@ -154,7 +154,7 @@ describe("Update a location", () => {
         should.not.exist(err);
         res.status.should.equal(404);
         res.body.status.should.equal("Unsuccessful");
-        res.body.message.should.equal("Location does not exist");
+        res.body.message.should.equal("Location not found");
         done();
       });
   });
