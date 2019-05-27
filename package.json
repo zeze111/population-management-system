@@ -1,0 +1,46 @@
+{
+  "name": "population-management-system",
+  "version": "1.0.0",
+  "description": "Population Management System that contains a list of locations and the total number of residents in each location broken down by gender.",
+  "main": "index.js",
+  "scripts": {
+    "test": "NODE_ENV=test mocha --exit ./tests --require @babel/register",
+    "start": "NODE_ENV=development nodemon --exec babel-node index.js",
+    "migrate": "NODE_ENV=test sequelize db:migrate",
+    "unmigrate": "NODE_ENV=test sequelize db:migrate:undo:all",
+    "pretest": "NODE_ENV=test npm run unmigrate && npm run migrate"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zeze111/population-management-system.git"
+  },
+  "author": "Osaze Edo-Osagie",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zeze111/population-management-system/issues"
+  },
+  "homepage": "https://github.com/zeze111/population-management-system#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.4.4",
+    "@babel/node": "^7.4.5",
+    "@babel/preset-env": "^7.4.5",
+    "@babel/register": "^7.4.4",
+    "dotenv": "^8.0.0",
+    "nodemon": "^1.19.1",
+    "path": "^0.12.7",
+    "validatorjs": "^3.15.1"
+  },
+  "dependencies": {
+    "@babel/core": "^7.4.5",
+    "body-parser": "^1.19.0",
+    "chai": "^4.2.0",
+    "chai-http": "^4.3.0",
+    "express": "^4.17.0",
+    "mocha": "^6.1.4",
+    "morgan": "^1.9.1",
+    "pg": "^7.11.0",
+    "pg-hstore": "^2.3.2",
+    "sequelize": "^5.8.6",
+    "sequelize-cli": "^5.4.0"
+  }
+}

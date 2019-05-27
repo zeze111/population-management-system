@@ -1,0 +1,19 @@
+language: node_js
+sudo: false
+
+node_js:
+  - "10.15.3"
+
+services:
+  - postgresql
+
+before_install:
+  - npm install -g npm@5
+  - psql -c 'create database populationmanagementtest;' -U postgres
+
+install:
+  - npm install
+
+env:
+  global:
+    - export NODE_ENV=test
